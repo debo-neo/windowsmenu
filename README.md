@@ -66,7 +66,7 @@ typedef struct {
 ```
 
 *   **O(n) Lookup:** The `FindHandler` function iterates through the table to match the Command ID (`UINT`) with its corresponding function pointer (`CommandHandler`).
-*   **Modularity:** Adding new commands requires only adding an enum ID, a handler function, and an entry in the table, without modifying the core message loop logic.
+*   **Modularity:** New commands can be added by simply registering an enum ID, handler, and table entry.
 *   **Type Safety:** Using `typedef void (*CommandHandler)(void);` ensures that all command handlers adhere to a strict signature, preventing stack corruption due to mismatched arguments.
 
 #### 2.3 Memory Management & Resource Handling
